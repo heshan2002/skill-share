@@ -10,7 +10,6 @@ import socialMediaApp.services.LikeService;
 import java.util.List;
 
 @RestController
-
 @RequestMapping("/api/likes")
 public class LikesController {
 
@@ -20,11 +19,13 @@ public class LikesController {
         this.likeService = likeService;
     }
 
+    //add like
     @PostMapping("/add")
     public ResponseEntity<String> add(@RequestBody LikeRequest likeRequest){
         likeService.add(likeRequest);
         return new ResponseEntity<>("Added", HttpStatus.OK);
     }
+
 
     @GetMapping("/getallbypost/{postId}")
     public ResponseEntity<List<LikeResponse>> getAllByPost(@PathVariable int postId){
@@ -41,6 +42,7 @@ public class LikesController {
         return new ResponseEntity<>(likeService.isLiked(userId,postId),HttpStatus.OK);
     }
 
+    //delete like
     @PostMapping("/delete")
     public ResponseEntity<String> delete(@RequestBody LikeRequest likeRequest){
         likeService.delete(likeRequest);
