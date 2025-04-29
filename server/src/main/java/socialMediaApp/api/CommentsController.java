@@ -26,6 +26,7 @@ public class CommentsController {
         return new ResponseEntity<>(commentService.getAll(), HttpStatus.OK);
     }
 
+    //get all comment by post
     @GetMapping("/getallbypost/{postId}")
     public ResponseEntity<List<CommentGetResponse>> getAllByPost(@PathVariable int postId){
         return new ResponseEntity<>(commentService.getAllByPost(postId),HttpStatus.OK);
