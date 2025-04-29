@@ -44,6 +44,7 @@ public class CommentsController {
         return new ResponseEntity<>("Added",HttpStatus.CREATED);
     }
 
+    //delete comment
     @DeleteMapping("/delete")
     public ResponseEntity<String> delete(@RequestParam int id){
         commentService.delete(id);
