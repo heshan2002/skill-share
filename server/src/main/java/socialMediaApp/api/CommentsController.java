@@ -10,6 +10,7 @@ import socialMediaApp.services.CommentService;
 import java.util.List;
 
 @RestController
+
 @RequestMapping("/api/comments")
 public class CommentsController {
 
