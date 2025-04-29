@@ -10,7 +10,6 @@ import socialMediaApp.services.CommentService;
 import java.util.List;
 
 @RestController
-
 @RequestMapping("/api/comments")
 public class CommentsController {
 
@@ -32,6 +31,7 @@ public class CommentsController {
         return new ResponseEntity<>(commentService.getAllByPost(postId),HttpStatus.OK);
     }
 
+    //get all comment by User
     @GetMapping("/getallbyuser/{userId}")
     public ResponseEntity<List<CommentGetResponse>> getAllByUser(@PathVariable int userId){
         return new ResponseEntity<>(commentService.getAllByUser(userId),HttpStatus.OK);
