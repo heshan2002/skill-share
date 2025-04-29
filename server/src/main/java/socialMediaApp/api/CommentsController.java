@@ -20,6 +20,7 @@ public class CommentsController {
         this.commentService = commentService;
     }
 
+    // get all  comments
     @GetMapping("/getall")
     public ResponseEntity<List<CommentGetResponse>> getAll(){
         return new ResponseEntity<>(commentService.getAll(), HttpStatus.OK);
