@@ -10,6 +10,7 @@ import socialMediaApp.services.LikeService;
 import java.util.List;
 
 @RestController
+
 @RequestMapping("/api/likes")
 public class LikesController {
 
