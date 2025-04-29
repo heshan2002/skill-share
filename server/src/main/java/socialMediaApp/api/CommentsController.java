@@ -37,6 +37,7 @@ public class CommentsController {
         return new ResponseEntity<>(commentService.getAllByUser(userId),HttpStatus.OK);
     }
 
+    //add comment
     @PostMapping("/add")
     public ResponseEntity<String> add(@RequestBody CommentAddRequest commentAddRequest){
         commentService.add(commentAddRequest);
