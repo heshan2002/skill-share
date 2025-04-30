@@ -4,7 +4,7 @@ import {useFormik} from 'formik'
 import AuthContext from '../context/AuthContext'
 import AuthService from '../services/AuthService'
 import { useNavigate } from 'react-router-dom'
-import svg from '../svgs/main.svg'
+
 
 
 function Login() {
@@ -58,15 +58,15 @@ function Login() {
                   bg: 'pink.500',
                   zIndex: -1,
                 }}>
-                Spring-React
+                Share your
               </Text>
               <br />{' '}
               <Text color={'pink.500'} as={'span'}>
-                Social Media App
+                Skills
               </Text>{' '}
             </Heading>
           </Stack>
-          <Image src={svg} />
+         
         </VStack>
       </Flex>
       <Flex justifyContent={'center'} alignItems={'center'} width={'100%'}>

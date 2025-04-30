@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
 import AuthService from '../services/AuthService'
-import svg from '../svgs/main.svg'
+
 
 function Register() {
 
@@ -62,15 +62,15 @@ function Register() {
                   bg: 'pink.500',
                   zIndex: -1,
                 }}>
-                Spring-React
+                Skill share
               </Text>
               <br />{' '}
               <Text color={'pink.500'} as={'span'}>
-                Social Media App
+                App
               </Text>{' '}
             </Heading>
           </Stack>
-          <Image src={svg} />
+        
         </VStack>
       </Flex>
       <Flex justifyContent={'center'} alignItems={'center'} width={'100%'}>
