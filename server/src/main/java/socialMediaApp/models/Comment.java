@@ -23,10 +23,12 @@ public class Comment {
     @NotNull
     @Column(name = "description")
     private String description;
+
     @NotNull
     @ManyToOne
     @JoinColumn(name = "post_id")
     Post post;
+    
     @NotNull
     @ManyToOne
     @JoinColumn(name = "user_id")
